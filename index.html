@@ -12,23 +12,22 @@
     }
 
     :root {
-      --boroña: #6f2c3f;    /* Granate profundo */
-      --dorado-suave: #d4af37;
+      --boroña: #6f2c3f;
+      --dorado: #d4af37;
       --crema: #faf7f2;
       --grafito: #2e2e2e;
     }
 
     body {
-      background-color: var(--crema);
+      background: var(--crema);
       font-family: 'Montserrat', sans-serif;
       color: var(--grafito);
       line-height: 1.5;
     }
 
-    h1, h2, h3, .logo, .menu li a {
+    h1, h2, h3 {
       font-family: 'Cormorant Garamond', serif;
       font-weight: 600;
-      letter-spacing: 0.5px;
     }
 
     @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap');
@@ -36,50 +35,41 @@
     /* HEADER */
     header {
       background: var(--boroña);
-      padding: 0.8rem 1.5rem;
+      padding: 0.8rem 1rem;
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
     .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .logo {
-      color: var(--dorado-suave);
-      font-size: 1.8rem;
-      line-height: 1.2;
+      color: var(--dorado);
+      font-size: 1.5rem;
     }
 
     .logo span {
       color: var(--crema);
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       display: block;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 300;
     }
 
     .menu {
       display: flex;
       list-style: none;
-      gap: 2rem;
+      gap: 1.5rem;
     }
 
     .menu a {
       color: var(--crema);
       text-decoration: none;
-      font-size: 1.1rem;
-      transition: 0.3s;
-    }
-
-    .menu a:hover {
-      color: var(--dorado-suave);
+      font-size: 1rem;
     }
 
     .hamburger {
@@ -88,216 +78,211 @@
       background: none;
       border: none;
       color: var(--crema);
-      cursor: pointer;
     }
 
-    /* HERO NUEVO */
+    /* HERO - CON LA IMAGEN CORRECTA */
     .hero {
       max-width: 1200px;
-      margin: 2rem auto;
+      margin: 1rem auto;
       padding: 0 1rem;
     }
 
     .hero-wrapper {
-      background: linear-gradient(135deg, var(--boroña) 0%, #4a1e2b 100%);
+      background: var(--boroña);
       border-radius: 2rem;
       overflow: hidden;
-      border: 2px solid var(--dorado-suave);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      border: 3px solid var(--dorado);
     }
 
     .hero-imagen {
       width: 100%;
-      height: 400px;
+      height: auto;
+      max-height: 500px;
       object-fit: cover;
-      object-position: 50% 30%;
-      border-bottom: 3px solid var(--dorado-suave);
+      object-position: center 30%;
+      display: block;
     }
 
     .hero-contenido {
-      padding: 2rem;
+      padding: 2rem 1rem;
       text-align: center;
     }
 
     .hero-contenido h1 {
-      color: var(--dorado-suave);
-      font-size: 2.5rem;
+      color: var(--dorado);
+      font-size: 2rem;
       margin-bottom: 0.5rem;
     }
 
     .hero-contenido p {
       color: var(--crema);
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       font-style: italic;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
 
-    .btn-wa {
-      display: inline-block;
+    .btn {
       background: #25d366;
       color: white;
-      padding: 1rem 2.5rem;
+      padding: 1rem 2rem;
       border-radius: 3rem;
       text-decoration: none;
-      font-weight: 600;
-      border: 2px solid var(--dorado-suave);
-      font-size: 1.2rem;
+      display: inline-block;
+      font-weight: bold;
+      border: 2px solid var(--dorado);
     }
 
-    /* SECCIONES */
+    /* SECCIONES RESPONSIVAS */
     .seccion {
       max-width: 1200px;
-      margin: 3rem auto;
+      margin: 2rem auto;
       padding: 0 1rem;
     }
 
     .seccion h2 {
       color: var(--boroña);
-      font-size: 2.2rem;
+      font-size: 2rem;
       text-align: center;
-      border-bottom: 3px solid var(--dorado-suave);
-      padding-bottom: 0.8rem;
+      border-bottom: 3px solid var(--dorado);
+      padding-bottom: 0.5rem;
       margin-bottom: 2rem;
     }
 
-    /* SOBRE */
+    /* SOBRE - SE VE BIEN EN MÓVIL */
     .sobre-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
       background: white;
-      padding: 2rem;
+      padding: 1.5rem;
       border-radius: 2rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-      border: 1px solid var(--dorado-suave);
+      border: 2px solid var(--dorado);
     }
 
-    .sobre-texto {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    @media (min-width: 768px) {
+      .sobre-grid {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     .sobre-texto h3 {
       color: var(--boroña);
-      font-size: 2rem;
-      margin-bottom: 1rem;
+      font-size: 1.8rem;
     }
 
-    .sobre-texto .badge {
+    .badge {
       background: var(--boroña);
-      color: var(--dorado-suave);
+      color: var(--dorado);
       padding: 0.5rem 1rem;
       border-radius: 2rem;
       display: inline-block;
-      width: fit-content;
       margin: 1rem 0;
-      font-weight: bold;
     }
 
     .sobre-img {
       width: 100%;
       border-radius: 1.5rem;
-      border: 3px solid var(--dorado-suave);
+      border: 3px solid var(--dorado);
     }
 
-    /* SERVICIOS */
+    /* SERVICIOS - APILADOS EN MÓVIL */
     .servicios-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .servicios-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     .servicio-item {
       background: white;
-      padding: 2rem 1.5rem;
+      padding: 1.5rem;
       border-radius: 1.5rem;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
       border-bottom: 4px solid var(--boroña);
-      transition: 0.3s;
     }
 
-    .servicio-item:hover {
-      transform: translateY(-5px);
-    }
-
-    .servicio-item h3 {
-      color: var(--boroña);
-      margin-bottom: 0.8rem;
-      font-size: 1.5rem;
-    }
-
-    /* PREGUNTAS */
+    /* PREGUNTAS - APILADAS EN MÓVIL */
     .faq-grid {
       display: grid;
-      grid-template-columns: repeat(2,1fr);
+      grid-template-columns: 1fr;
       gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .faq-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     .faq-card {
       background: white;
-      padding: 1.5rem;
+      padding: 1.2rem;
       border-radius: 1rem;
-      border-left: 6px solid var(--dorado-suave);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      border-left: 6px solid var(--dorado);
     }
 
-    .faq-card strong {
-      color: var(--boroña);
-      font-size: 1.2rem;
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-
-    /* CHAT NUEVO */
+    /* CHAT - OCUPA TODO EL ANCHO */
     .chat-moderno {
       background: white;
       border-radius: 2rem;
-      padding: 2rem;
+      padding: 1.5rem;
       border: 2px solid var(--boroña);
-      box-shadow: 0 20px 40px rgba(111,44,63,0.1);
     }
 
     .chat-ventana {
       background: #f5f0eb;
-      border-radius: 1.5rem;
-      padding: 1.5rem;
-      min-height: 180px;
-      margin-bottom: 1.5rem;
-      border: 1px solid var(--dorado-suave);
-      font-style: italic;
+      border-radius: 1rem;
+      padding: 1rem;
+      min-height: 150px;
+      margin-bottom: 1rem;
+      border: 1px solid var(--dorado);
     }
 
     .chat-control {
       display: flex;
+      flex-direction: column;
       gap: 0.5rem;
-      flex-wrap: wrap;
+    }
+
+    @media (min-width: 768px) {
+      .chat-control {
+        flex-direction: row;
+      }
     }
 
     .chat-control input {
       flex: 1;
       padding: 1rem;
-      border: 2px solid var(--dorado-suave);
+      border: 2px solid var(--dorado);
       border-radius: 3rem;
-      font-size: 1rem;
+      width: 100%;
     }
 
     .chat-control button {
       background: var(--boroña);
       color: white;
+      padding: 1rem 2rem;
       border: none;
-      padding: 0 2rem;
       border-radius: 3rem;
       font-weight: bold;
-      cursor: pointer;
-      border: 2px solid var(--dorado-suave);
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .chat-control button {
+        width: auto;
+      }
     }
 
     .chat-sugerencias {
       display: flex;
+      flex-wrap: wrap;
       gap: 0.5rem;
       margin-top: 1rem;
-      flex-wrap: wrap;
     }
 
     .chat-sugerencias button {
@@ -306,93 +291,82 @@
       padding: 0.5rem 1rem;
       border-radius: 2rem;
       font-size: 0.9rem;
-      cursor: pointer;
+      flex: 1 1 auto;
     }
 
     /* CONTACTO */
     .contacto-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
       background: white;
-      padding: 2rem;
+      padding: 1.5rem;
       border-radius: 2rem;
-      border: 2px solid var(--dorado-suave);
+      border: 2px solid var(--dorado);
     }
 
-    .contacto-datos p {
-      margin: 1rem 0;
-      font-size: 1.1rem;
+    @media (min-width: 768px) {
+      .contacto-grid {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     .contacto-boton {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .btn-wa-sec {
-      background: #25d366;
-      color: white;
-      padding: 1rem 2rem;
-      border-radius: 3rem;
-      text-decoration: none;
-      font-weight: bold;
-      width: fit-content;
+      text-align: center;
     }
 
     /* FOOTER */
     footer {
       background: var(--boroña);
       color: var(--crema);
-      padding: 2.5rem 1rem;
-      margin-top: 4rem;
-      border-top: 4px solid var(--dorado-suave);
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+      border-top: 4px solid var(--dorado);
     }
 
     .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
       max-width: 1200px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     .footer-credits {
-      grid-column: span 2;
       text-align: center;
       margin-top: 2rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--dorado-suave);
+      padding-top: 1rem;
+      border-top: 1px solid var(--dorado);
     }
 
     .btn-tarjeta {
-      background: var(--dorado-suave);
+      background: var(--dorado);
       color: var(--boroña);
       padding: 0.8rem 1.5rem;
       border-radius: 3rem;
       text-decoration: none;
-      font-weight: bold;
       display: inline-block;
-      margin-top: 0.5rem;
+      font-weight: bold;
     }
 
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       .menu {
         display: none;
         position: absolute;
-        top: 80px;
+        top: 70px;
         left: 0;
         width: 100%;
         background: var(--boroña);
         flex-direction: column;
         align-items: center;
-        padding: 1.5rem 0;
-        gap: 1rem;
-        border-top: 2px solid var(--dorado-suave);
+        padding: 1rem 0;
+        border-top: 2px solid var(--dorado);
       }
 
       .menu.mostrar {
@@ -403,12 +377,8 @@
         display: block;
       }
 
-      .sobre-grid, .servicios-grid, .faq-grid, .contacto-grid, .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-imagen {
-        height: 250px;
+      .hero-contenido h1 {
+        font-size: 1.8rem;
       }
     }
   </style>
@@ -432,72 +402,63 @@
 <main id="inicio">
   <section class="hero">
     <div class="hero-wrapper">
-      <img src="https://images.unsplash.com/photo-1549060279-7d68b1180a5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-           alt="Mujer con faja postquirúrgica sonriendo" class="hero-imagen">
+      <!-- IMAGEN CORRECTA: Mujer latina, faja beige, estudio elegante -->
+      <img src="https://images.unsplash.com/photo-1578496781985-452d4a934c3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+           alt="Mujer con faja postquirúrgica beige" 
+           class="hero-imagen">
       <div class="hero-contenido">
         <h1>LA CLÍNICA DE LAS FAJAS EDI</h1>
         <p>"La elegancia en cada curva"</p>
-        <a href="https://wa.me/573007245058" class="btn-wa">📲 Agenda tu asesoría</a>
+        <a href="https://wa.me/573007245058" class="btn">📲 Agenda tu asesoría</a>
       </div>
     </div>
   </section>
 
   <section id="sobre" class="seccion">
-    <h2>HISTORIA DE EDILSE</h2>
+    <h2>HISTORIA</h2>
     <div class="sobre-grid">
       <div class="sobre-texto">
         <h3>25 años vistiendo cuerpos</h3>
-        <p>Edilse comenzó su taller en Cúcuta hace más de dos décadas, con un sueño: ayudar a las mujeres a recuperar su confianza después de cirugías, embarazos y cambios corporales.</p>
+        <p>Edilse comenzó en Cúcuta hace más de dos décadas con un sueño: ayudar a mujeres a recuperar su confianza después de cirugías, embarazos y cambios corporales.</p>
         <span class="badge">✨ +2500 mujeres transformadas ✨</span>
-        <p>Hoy, sus diseños viajan por toda Latinoamérica, confeccionados a mano con materiales hipoalergénicos y un cuidado obsesivo por el detalle.</p>
+        <p>Hoy, sus diseños viajan por Latinoamérica, confeccionados a mano con materiales hipoalergénicos.</p>
       </div>
-      <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Edilse trabajando" class="sobre-img">
+      <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Edilse" class="sobre-img">
     </div>
   </section>
 
   <section id="servicios" class="seccion">
-    <h2>ESPECIALIDADES</h2>
+    <h2>SERVICIOS</h2>
     <div class="servicios-grid">
-      <div class="servicio-item">
-        <h3>🔹 Postquirúrgicas</h3>
-        <p>Diseñadas para lipo, abdominoplastia, cesáreas. Compresión exacta, tejidos que cuidan.</p>
-      </div>
-      <div class="servicio-item">
-        <h3>🔹 Piel sensible</h3>
-        <p>Hipoalergénicas, para quemaduras, cicatrices y tratamientos delicados.</p>
-      </div>
-      <div class="servicio-item">
-        <h3>🔹 A tu medida</h3>
-        <p>Confección única. Cada cuerpo es diferente y merece su faja.</p>
-      </div>
+      <div class="servicio-item"><h3>Postquirúrgicas</h3><p>Para lipo, abdominoplastia, cesáreas. Compresión exacta.</p></div>
+      <div class="servicio-item"><h3>Piel sensible</h3><p>Hipoalergénicas para quemaduras y cicatrices.</p></div>
+      <div class="servicio-item"><h3>A tu medida</h3><p>Confección única. Cada cuerpo es diferente.</p></div>
     </div>
   </section>
 
   <section id="faq" class="seccion">
-    <h2>PREGUNTAS FRECUENTES</h2>
+    <h2>PREGUNTAS</h2>
     <div class="faq-grid">
-      <div class="faq-card"><strong>¿Cuánto tiempo debo usarla?</strong> De 4 a 8 semanas según cirugía. Te asesoramos.</div>
-      <div class="faq-card"><strong>¿Hacen envíos?</strong> A toda Colombia y Latinoamérica. Consulta tarifas.</div>
-      <div class="faq-card"><strong>¿Cómo tomo medidas?</strong> Presencial en Cúcuta o por videollamada.</div>
-      <div class="faq-card"><strong>¿Qué materiales usan?</strong> Powernet, algodón quirúrgico, hipoalergénicos.</div>
+      <div class="faq-card"><strong>¿Cuánto tiempo usarla?</strong> 4-8 semanas según cirugía.</div>
+      <div class="faq-card"><strong>¿Envíos?</strong> A toda Colombia y Latinoamérica.</div>
+      <div class="faq-card"><strong>¿Cómo tomo medidas?</strong> Presencial o por videollamada.</div>
+      <div class="faq-card"><strong>¿Materiales?</strong> Powernet, algodón quirúrgico.</div>
     </div>
   </section>
 
   <section class="seccion">
-    <h2>💬 ASISTENTE VIRTUAL</h2>
+    <h2>ASISTENTE VIRTUAL</h2>
     <div class="chat-moderno">
-      <div class="chat-ventana" id="chatBox">
-        <p><strong>EDI:</strong> Hola, soy el asistente virtual de Edilse. Pregúntame lo que necesites.</p>
-      </div>
+      <div class="chat-ventana" id="chatBox"><p><strong>EDI:</strong> Hola, pregunta lo que necesites.</p></div>
       <div class="chat-control">
-        <input type="text" id="chatInput" placeholder="Escribe tu pregunta...">
+        <input type="text" id="chatInput" placeholder="Escribe...">
         <button onclick="enviarChat()">Enviar</button>
       </div>
       <div class="chat-sugerencias">
-        <button onclick="sugerir('¿Qué faja necesito para cesárea?')">🤰 Cesárea</button>
-        <button onclick="sugerir('¿Cuánto cuesta una personalizada?')">💰 Precios</button>
-        <button onclick="sugerir('¿Envían a México?')">✈️ Envíos</button>
-        <button onclick="sugerir('¿Cómo tomo medidas en casa?')">📏 Medidas</button>
+        <button onclick="sugerir('¿Faja para cesárea?')">Cesárea</button>
+        <button onclick="sugerir('¿Precios?')">Precios</button>
+        <button onclick="sugerir('¿Envíos a México?')">Envíos</button>
+        <button onclick="sugerir('¿Medidas en casa?')">Medidas</button>
       </div>
     </div>
   </section>
@@ -505,16 +466,15 @@
   <section id="contacto" class="seccion">
     <h2>CONTACTO</h2>
     <div class="contacto-grid">
-      <div class="contacto-datos">
-        <p><strong>📍 Dirección:</strong> Barrio Lleras, Calle 1a · Cúcuta</p>
-        <p><strong>📱 WhatsApp:</strong> <a href="https://wa.me/573007245058" style="color:var(--boroña);">300 724 5058</a></p>
-        <p><strong>📞 Teléfono:</strong> 300 724 5058</p>
-        <p><strong>⏰ Atención:</strong> Lunes a sábado 9am–7pm</p>
-        <p><strong>🌎 Envíos:</strong> Colombia y Latinoamérica</p>
+      <div>
+        <p><strong>📍 Barrio Lleras, Calle 1a · Cúcuta</strong></p>
+        <p>📱 <a href="https://wa.me/573007245058">300 724 5058</a></p>
+        <p>📞 300 724 5058</p>
+        <p>⏰ Lunes a sábado 9am–7pm</p>
       </div>
       <div class="contacto-boton">
-        <p style="font-size:1.3rem; font-weight:600;">¿Lista para tu cambio?</p>
-        <a href="https://wa.me/573007245058" class="btn-wa-sec">📲 ESCRIBIR AHORA</a>
+        <p style="font-size:1.3rem;">¿Lista?</p>
+        <a href="https://wa.me/573007245058" class="btn">📲 ESCRIBIR</a>
       </div>
     </div>
   </section>
@@ -523,17 +483,16 @@
 <footer>
   <div class="footer-grid">
     <div>
-      <h3 style="color:var(--dorado-suave);">EDILSE</h3>
-      <p>La Clínica de las Fajas</p>
-      <p>📍 Barrio Lleras · Cúcuta</p>
+      <h3 style="color:var(--dorado);">EDILSE</h3>
+      <p>La Clínica de las Fajas · Cúcuta</p>
     </div>
     <div style="text-align:right;">
       <p>📱 300 724 5058</p>
       <a href="https://wa.me/573244913371?text=Hola,%20quiero%20mi%20tarjeta%20como%20Edilse" class="btn-tarjeta">💳 QUIERO MI TARJETA</a>
     </div>
     <div class="footer-credits">
-      <p>✨ Diseño NG · <a href="https://wa.me/573244913371" style="color:var(--dorado-suave);">Contáctame</a> · 📲 324 491 3371</p>
-      <p>© 2026 Edilse · Todos los derechos reservados</p>
+      <p>✨ Diseño NG · <a href="https://wa.me/573244913371" style="color:var(--dorado);">Contáctame</a> · 324 491 3371</p>
+      <p>© 2026 Edilse</p>
     </div>
   </div>
 </footer>
@@ -544,7 +503,6 @@
   hamburger.addEventListener('click', () => menu.classList.toggle('mostrar'));
   document.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', () => menu.classList.remove('mostrar')));
 
-  // CHAT
   const chatBox = document.getElementById('chatBox');
   const chatInput = document.getElementById('chatInput');
 
@@ -563,12 +521,12 @@
     setTimeout(() => {
       const lower = p.toLowerCase();
       let rta = '';
-      if (lower.includes('cesárea') || lower.includes('cesarea')) rta = 'Recomendamos faja postquirúrgica con compresión media, de 4 a 6 semanas. ¿Te asesoro?';
-      else if (lower.includes('precio') || lower.includes('cuesta')) rta = 'Desde $250.000 COP dependiendo del diseño. Escríbeme al WhatsApp para presupuesto exacto.';
-      else if (lower.includes('envío') || lower.includes('mexico')) rta = 'Sí, enviamos a todo Latinoamérica. El costo depende del país.';
-      else if (lower.includes('medida')) rta = 'Podemos guiarte por videollamada o venir al taller en Cúcuta.';
-      else if (lower.includes('hola')) rta = '¡Hola! Encantada de saludarte. ¿En qué puedo ayudarte?';
-      else rta = 'Gracias por tu pregunta. Para más detalle, ¿me escribes por WhatsApp?';
+      if (lower.includes('cesárea') || lower.includes('cesarea')) rta = 'Faja postquirúrgica, 4-6 semanas. ¿Te asesoro?';
+      else if (lower.includes('precio')) rta = 'Desde $250.000. Escríbeme al WhatsApp.';
+      else if (lower.includes('envío')) rta = 'Sí, a todo Latinoamérica.';
+      else if (lower.includes('medida')) rta = 'Te guío por videollamada.';
+      else if (lower.includes('hola')) rta = '¡Hola! ¿En qué puedo ayudarte?';
+      else rta = '¿Me escribes por WhatsApp para más detalle?';
       agregar('EDI', rta);
     }, 800);
   }
